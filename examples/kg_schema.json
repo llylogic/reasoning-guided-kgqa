@@ -1,0 +1,1 @@
+{"aliases":{"Book":["the book"],"Ava":["Ava"]},"relations":{"author":{"aliases":["written by"],"domain":["work"],"range":["person"]},"home":{"aliases":["place of residence"],"domain":["person"],"range":["place"]}},"types":{"Book":["work"],"Ava":["person"],"Cedar":["place"]}}

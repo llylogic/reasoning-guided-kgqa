@@ -1,0 +1,9 @@
+{
+  "backbone": "workspace/models/Llama-2-7b-chat-hf",
+  "teacher": "workspace/models/DeepSeek-R1",
+  "bge": "workspace/models/bge-base-en-v1.5",
+  "schema": "workspace/data/kg_schema.json",
+  "graph": null,
+  "data_dir": "workspace/data",
+  "output_dir": "workspace/output"
+}

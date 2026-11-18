@@ -1,0 +1,43 @@
+{
+  "radius": 4,
+  "top_k": 50,
+  "depth": 8,
+  "branch": 20,
+  "evidence_tokens": 2048,
+  "noise_pool": 100,
+  "noise_fraction": 0.3,
+  "attempts": 3,
+  "replay": 0.05,
+  "seed": 42,
+  "walk_length": 4,
+  "relation_threshold": 0.45,
+  "rank": 16,
+  "alpha": 16,
+  "dropout": 0.05,
+  "accumulation": 32,
+  "targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "learning_rates": [
+    2e-06,
+    2e-06,
+    3e-06
+  ],
+  "epochs": [
+    3,
+    3,
+    5
+  ],
+  "batch_sizes": [
+    2,
+    2,
+    1
+  ],
+  "max_train_tokens": 4096
+}

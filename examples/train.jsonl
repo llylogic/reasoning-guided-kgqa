@@ -1,0 +1,1 @@
+{"dataset":"webqsp","split":"train","id":"format_example_train","question":"Where does the author of Book live?","topics":["Book"],"answers":["Cedar"],"answer_ids":["Cedar"],"graph":[["Book","author","Ava"],["Ava","home","Cedar"],["Book","genre","History"]],"gold":[["Book","author","Ava"],["Ava","home","Cedar"]],"required_phrases":[]}
