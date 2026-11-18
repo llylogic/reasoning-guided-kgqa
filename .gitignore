@@ -1,0 +1,15 @@
+workspace/
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+paths.local.json
+.env
+.env.*
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.parquet
+*.sqlite
