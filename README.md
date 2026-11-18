@@ -57,7 +57,7 @@ cp paths.json paths.local.json
 python -m rgr.graph_index /path/to/triples.jsonl /path/to/freebase.sqlite
 ```
 
-## 4. 运行一个完整实验
+## 4. 运行项目
 
 以下以 WebQSP 为例，CWQ 使用独立的训练规划、适配器和输出目录。
 
@@ -103,21 +103,3 @@ python run_qa.py bootstrap --left /path/to/ours.jsonl --right /path/to/baseline.
 ```
 
 该命令按题配对重采样 10,000 次，给出 Hits 差值及其 95% 区间，单位为百分点。
-
-## 5. 用 GitHub 管理实验版本
-
-在已配置私有仓库访问权限的服务器上，用 `git clone` 获取源码。把模型和基准数据放在服务器本地，逐台填写 `paths.local.json`。运行前保存 `git rev-parse HEAD` 输出的提交号、实际参数、数据版本和 checkpoint 标识，以便把后续结果对应到运行过的版本。
-
-日常改动可以在独立分支上练习。例如调整训练说明后，先检查差异和测试，再推送分支，在 GitHub 打开 pull request 查看修改。
-
-```bash
-git switch -c docs/experiment-notes
-# 编辑 README.md 后
-git diff -- README.md
-python3 -m unittest discover -s tests -v
-git add README.md
-git commit -m "Document the experiment setup"
-git push -u origin docs/experiment-notes
-```
-
-本仓库的自动化测试覆盖命令行数据流、教师筛选、回放构造、局部图与 SGS、推理回退和评分。正式基准分数、多卡训练耗时和显存使用量应从配套权重和数据上的实际运行取得。
